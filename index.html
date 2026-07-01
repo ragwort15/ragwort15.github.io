@@ -160,6 +160,9 @@
   .skill-row .cat{font-family:var(--mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
   .skill-row .items{color:var(--ink);font-size:.97rem}
   @media(max-width:680px){.skill-row{grid-template-columns:1fr;gap:8px}}
+  .courses{display:flex;flex-wrap:wrap;gap:10px}
+  .course-chip{font-family:var(--mono);font-size:13px;color:var(--ink);border:1px solid var(--line);border-radius:100px;padding:9px 16px;transition:border-color .2s ease,color .2s ease,background .2s ease}
+  .course-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
 
   /* ---------- education ---------- */
   .edu{display:flex;flex-direction:column;gap:0}
@@ -202,8 +205,10 @@
     <div class="nav-links">
       <a href="#top">about</a>
       <a href="#skills">skills</a>
-      <a href="#experience">experience</a>
       <a href="#projects">projects</a>
+      <a href="#education">education</a>
+      <a href="#courses">courses</a>
+      <a href="#experience">experience</a>
       <a href="#contact">contact</a>
     </div>
   </div>
@@ -315,10 +320,29 @@
     </div>
   </section>
 
+  <!-- COURSES -->
+  <section id="courses">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Courses</h2>
+      <span class="sec-rule"></span>
+    </div>
+    <div class="courses reveal">
+      <span class="course-chip">Data Structures &amp; Algorithms</span>
+      <span class="course-chip">Operating Systems</span>
+      <span class="course-chip">Enterprise Software Platforms</span>
+      <span class="course-chip">Machine Learning</span>
+      <span class="course-chip">Distributed Systems</span>
+      <span class="course-chip">Intelligent Cloud Platform</span>
+      <span class="course-chip">Data Mining</span>
+      <span class="course-chip">System Software Design</span>
+    </div>
+  </section>
+
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="sec-head reveal">
-      <span class="sec-num">04</span>
+      <span class="sec-num">05</span>
       <h2 class="sec-title">Experience</h2>
       <span class="sec-rule"></span>
     </div>
