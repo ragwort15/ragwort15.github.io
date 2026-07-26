@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anupama Singh — Software Engineer</title>
-<meta name="description" content="Anupama Singh — Backend & Platform Software Engineer. 4+ years building scalable services, developer tooling, and distributed systems.">
+<title>Anupama Singh — Backend & Distributed Systems Engineer</title>
+<meta name="description" content="Anupama Singh — Backend & Distributed Systems Engineer. 4+ years building scalable, fault-tolerant services, with hands-on work in distributed systems, observability, and AI agents.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -89,22 +89,19 @@
   h1 em{font-style:italic;color:var(--accent)}
   .intro{font-size:clamp(1.15rem,2.6vw,1.55rem);color:var(--muted);font-weight:400;margin-bottom:18px}
   .intro strong{color:var(--ink);font-weight:600}
-  .hero-about{font-size:clamp(1.02rem,2vw,1.18rem);color:var(--ink);max-width:64ch;font-weight:400;line-height:1.7}
+  .hero-about{font-size:clamp(1.02rem,2vw,1.18rem);color:var(--ink);max-width:64ch;font-weight:400;line-height:1.75}
   .hero-about strong{color:var(--accent);font-weight:500}
-  .tagline{font-size:clamp(1.05rem,2.4vw,1.45rem);color:var(--muted);max-width:44ch;font-weight:400}
-  .tagline strong{color:var(--ink);font-weight:500}
   .hero-meta{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:38px;font-family:var(--mono);font-size:13px;color:var(--faint)}
   .hero-meta span{display:flex;align-items:center;gap:8px}
   .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
   .hero-meta .gpa-badge{color:var(--accent);font-weight:600;border:1px solid var(--accent);padding:5px 12px;border-radius:100px;background:var(--accent-soft)}
-  .gpa-stat .n{color:var(--accent)}
-  .gpa-stat .l{color:var(--accent)}
   .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:42px}
   .btn{
     font-family:var(--mono);font-size:13px;padding:13px 22px;border-radius:2px;
     border:1px solid var(--line);transition:all .22s;display:inline-flex;align-items:center;gap:9px;
   }
   .btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
   .btn.primary{background:var(--accent);color:#1a1206;border-color:var(--accent);font-weight:500}
   .btn.primary:hover{background:transparent;color:var(--accent);transform:translateY(-2px)}
 
@@ -115,13 +112,6 @@
   .sec-num{font-family:var(--mono);font-size:13px;color:var(--accent)}
   .sec-title{font-family:var(--display);font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:500;letter-spacing:-.01em}
   .sec-rule{flex:1;height:1px;background:var(--line);align-self:center;margin-bottom:6px}
-
-  .about p{font-size:clamp(1.1rem,2.2vw,1.35rem);max-width:62ch;color:var(--ink);font-weight:400;line-height:1.7}
-  .about p .hl{color:var(--accent)}
-  .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;margin-top:54px}
-  .stat .n{font-family:var(--display);font-size:clamp(2rem,5vw,2.9rem);color:var(--ink);font-weight:500;line-height:1}
-  .stat .l{font-family:var(--mono);font-size:11.5px;color:var(--muted);margin-top:10px;text-transform:uppercase;letter-spacing:.06em}
-  @media(max-width:680px){.stats{grid-template-columns:repeat(2,1fr);gap:34px 22px}}
 
   /* ---------- experience ---------- */
   .xp{border-top:1px solid var(--line)}
@@ -143,19 +133,22 @@
   .card{
     border:1px solid var(--line);background:linear-gradient(160deg,var(--surface),var(--bg-2));
     padding:28px;border-radius:3px;transition:transform .25s,border-color .25s;position:relative;overflow:hidden;
+    display:flex;flex-direction:column;
   }
   .card::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--accent);transition:width .35s}
   .card:hover{transform:translateY(-5px);border-color:var(--accent)}
   .card:hover::before{width:100%}
+  .card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
   .card .tag{font-family:var(--mono);font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+  .card .go{font-family:var(--mono);font-size:16px;color:var(--faint);transition:color .2s,transform .2s;flex-shrink:0}
+  .card:hover .go{color:var(--accent);transform:translate(3px,-3px)}
   .card h3{font-family:var(--display);font-size:1.4rem;font-weight:500;margin:12px 0 12px;letter-spacing:-.01em}
-  .card p{color:var(--muted);font-size:.95rem;margin-bottom:18px}
+  .card p{color:var(--muted);font-size:.95rem;margin-bottom:18px;flex:1}
   .chips{display:flex;flex-wrap:wrap;gap:7px}
   .chip{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);padding:4px 10px;border-radius:100px}
 
   /* ---------- skills ---------- */
-  .skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px 40px}
-  @media(max-width:680px){.skill-grid{grid-template-columns:1fr}}
   .skill-row{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:160px 1fr;gap:18px;align-items:baseline}
   .skill-row .cat{font-family:var(--mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
   .skill-row .items{color:var(--ink);font-size:.97rem}
@@ -192,7 +185,6 @@
   .hero-stagger>*:nth-child(4){animation-delay:.44s}
   .hero-stagger>*:nth-child(5){animation-delay:.57s}
   .hero-stagger>*:nth-child(6){animation-delay:.70s}
-  .hero-stagger>*:nth-child(7){animation-delay:.83s}
   @keyframes rise{to{opacity:1;transform:none}}
   @media(prefers-reduced-motion:reduce){.reveal,.hero-stagger>*{opacity:1!important;transform:none!important;animation:none!important}}
 </style>
@@ -206,9 +198,8 @@
       <a href="#top">about</a>
       <a href="#skills">skills</a>
       <a href="#projects">projects</a>
-      <a href="#education">education</a>
-      <a href="#courses">courses</a>
       <a href="#experience">experience</a>
+      <a href="#education">education</a>
       <a href="#contact">contact</a>
     </div>
   </div>
@@ -216,12 +207,12 @@
 
 <header id="top">
   <div class="wrap hero-stagger">
-    <div class="eyebrow">Backend &amp; Platform Engineer</div>
+    <div class="eyebrow">Backend &amp; Distributed Systems Engineer</div>
     <h1>Building something<br>that needs to <em>scale?</em></h1>
-    <p class="intro">Hi, my name is <strong>Anupama Singh</strong>.</p>
-    <p class="hero-about">I'm a <strong>backend &amp; platform engineer</strong> with <strong>4+ years</strong> shipping <strong>scalable, fault-tolerant</strong> software that holds up under real load. My focus is the layer that keeps systems alive — <strong>distributed services, failure detection, and observability</strong> — plus the automation that catches problems before users do. I work hands-on with Spring Boot, Node.js, Kubernetes, and CI/CD across Azure and AWS, wiring in Prometheus + Grafana so nothing fails silently, and I'm increasingly building with <strong>AI agents</strong> to take repetitive work off engineers' plates. Now pursuing an M.S. in Software Engineering at San Jose State, going deep on distributed systems, ML, and cloud. The throughline: <strong>systems that are resilient under the hood and clear on the surface.</strong></p>
+    <p class="intro">Hi, I'm <strong>Anupama Singh</strong>.</p>
+    <p class="hero-about">I build <strong>scalable, fault-tolerant</strong> backend systems that hold up under real load. My focus is the layer that keeps services alive — distributed systems, failure detection, and observability — plus the automation that catches problems before users do. I work hands-on with Kafka, Kubernetes, gRPC, and CI/CD across Azure and AWS, wiring in Prometheus and Grafana so nothing fails silently, and I'm increasingly building with <strong>AI agents</strong> to take repetitive work off engineers' plates. Now pursuing an M.S. in Software Engineering at San Jose State, going deep on distributed systems, ML, and cloud.</p>
     <div class="hero-meta">
-      <span class="gpa-badge"><span class="dot"></span> Current GPA — 3.82 / 4.0</span>
+      <span class="gpa-badge"><span class="dot"></span> GPA 3.82 / 4.0</span>
       <span>Open to SWE / Backend roles</span>
       <span>◷ San Jose, CA</span>
       <span>4+ yrs experience</span>
@@ -245,12 +236,11 @@
       <span class="sec-rule"></span>
     </div>
     <div class="reveal">
-      <div class="skill-row"><span class="cat">Languages</span><span class="items">JavaScript, TypeScript, Python, Java, C++, SQL</span></div>
-      <div class="skill-row"><span class="cat">Backend &amp; APIs</span><span class="items">Node.js, Spring Boot, Next.js, REST APIs, Microservices, Swagger, Postman</span></div>
-      <div class="skill-row"><span class="cat">AI &amp; ML</span><span class="items">AI agents &amp; agentic workflows, RAG systems, XGBoost, SHAP, NLP, Amazon Lex, Dialogflow</span></div>
-      <div class="skill-row"><span class="cat">Cloud Platforms</span><span class="items">AWS (CloudFormation, CodePipeline, CodeCommit), Microsoft Azure (AKS)</span></div>
-      <div class="skill-row"><span class="cat">DevOps &amp; Tooling</span><span class="items">Docker, Kubernetes, CI/CD, Git, Gradle</span></div>
-      <div class="skill-row"><span class="cat">Data &amp; Observability</span><span class="items">MySQL, PostgreSQL, MongoDB, Kafka, Prometheus, Grafana</span></div>
+      <div class="skill-row"><span class="cat">Languages</span><span class="items">Python, Java, C++, JavaScript, TypeScript, Go (learning), SQL</span></div>
+      <div class="skill-row"><span class="cat">Backend &amp; Distributed</span><span class="items">Spring Boot, Node.js, REST &amp; microservices, gRPC / protobuf, Kafka, WebSockets, event-driven design</span></div>
+      <div class="skill-row"><span class="cat">AI &amp; ML</span><span class="items">AI agents &amp; agentic workflows, RAG systems, LangGraph, XGBoost, SHAP, NLP</span></div>
+      <div class="skill-row"><span class="cat">Cloud &amp; DevOps</span><span class="items">AWS (CloudFormation, CodePipeline), Azure (AKS), Docker, Kubernetes, CI/CD, Git</span></div>
+      <div class="skill-row"><span class="cat">Data &amp; Observability</span><span class="items">MySQL, PostgreSQL, Prometheus, Grafana</span></div>
     </div>
   </section>
 
@@ -262,87 +252,77 @@
       <span class="sec-rule"></span>
     </div>
     <div class="proj-grid">
+
+      <a class="card reveal" href="https://github.com/ragwort15/paperchat" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">AI / Retrieval</span><span class="go">↗</span></div>
+        <h3>PaperChat — RAG over arXiv</h3>
+        <p>End-to-end retrieval-augmented pipeline: web ingestion, BGE embeddings, and cosine-similarity retrieval with local generation. Built a RAGAS-style evaluation harness and ran a cross-encoder reranker A/B test to keep output measurable.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">Evaluation</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">Hackathon · Bioinformatics</span><span class="go">↗</span></div>
+        <h3>Genome Firewall</h3>
+        <p>Takes a DNA sequence as input and recommends the more effective drug for a bacterial infection. Built in Python at a hackathon, turning genomic input into an actionable treatment suggestion.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Bioinformatics</span><span class="chip">DNA</span><span class="chip">Hackathon</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15/FutureLensAI" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">AI Agents</span><span class="go">↗</span></div>
+        <h3>FutureLens — Multi-Agent Simulation</h3>
+        <p>Multi-agent decision-simulation tool. A LangGraph pipeline orchestrates LLM calls with live web retrieval behind a FastAPI backend — an example of directing AI tools to build a working system end to end.</p>
+        <div class="chips"><span class="chip">LangGraph</span><span class="chip">Multi-Agent</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15/kafka-event-pipeline" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">Distributed Systems</span><span class="go">↗</span></div>
+        <h3>Kafka Event Pipeline</h3>
+        <p>Python event-processing pipeline on a Dockerized Kafka cluster, exploring partitions, consumer groups, delivery semantics, windowed aggregation, and broker failover — the internals behind reliable streaming.</p>
+        <div class="chips"><span class="chip">Kafka</span><span class="chip">Python</span><span class="chip">Docker</span><span class="chip">Streaming</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">Backend</span><span class="go">↗</span></div>
+        <h3>URL Shortener Service</h3>
+        <p>HTTP service in Go with counter-based base62 ID generation, a pluggable storage interface for swapping in-memory and database backends, RWMutex-guarded concurrent access, and 302 redirects for accurate click counting.</p>
+        <div class="chips"><span class="chip">Go</span><span class="chip">Concurrency</span><span class="chip">HTTP</span><span class="chip">System Design</span></div>
+      </a>
+
       <article class="card reveal">
-        <span class="tag">Distributed Systems</span>
-        <h3>Clinical Trials Management Platform</h3>
-        <p>Enterprise platform for the end-to-end clinical-trial lifecycle — modular services, RESTful APIs, and role-based access over sensitive data, with Prometheus + Grafana telemetry across services.</p>
-        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">REST</span><span class="chip">RBAC</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
-      </article>
-      <article class="card reveal">
-        <span class="tag">Cloud / IaC</span>
-        <h3>AWS Cloud Infrastructure Challenge</h3>
-        <p>Diagnosed and remediated CloudFormation templates flagged by cfn_nag and cfn-lint, then delivered fixes through a CodeCommit + CodePipeline workflow — infrastructure-as-code with policy-driven security review.</p>
-        <div class="chips"><span class="chip">CloudFormation</span><span class="chip">CodePipeline</span><span class="chip">cfn-lint</span><span class="chip">IaC</span></div>
-      </article>
-      <article class="card reveal">
-        <span class="tag">Distributed Systems</span>
-        <h3>Distributed Chord — Task Execution Engine</h3>
-        <p>Implemented the Chord DHT to route tasks across a peer-to-peer ring with finger-table maintenance and stabilization. Fault-tolerant dispatch via consistent hashing, demonstrating O(log N) lookups under churn.</p>
+        <div class="card-top"><span class="tag">Distributed Systems</span></div>
+        <h3>Distributed Chord — Task Engine</h3>
+        <p>Implemented the Chord DHT to route tasks across a peer-to-peer ring with finger-table maintenance and stabilization. Fault-tolerant dispatch via consistent hashing, with O(log N) lookups under churn.</p>
         <div class="chips"><span class="chip">Chord DHT</span><span class="chip">Consistent Hashing</span><span class="chip">P2P</span><span class="chip">Fault Tolerance</span></div>
       </article>
+
       <article class="card reveal">
-        <span class="tag">Machine Learning</span>
+        <div class="card-top"><span class="tag">Platform</span></div>
+        <h3>Clinical Trials Management Platform</h3>
+        <p>Enterprise platform for the end-to-end clinical-trial lifecycle — modular services, RESTful APIs, and role-based access over sensitive data, with Prometheus and Grafana telemetry across services.</p>
+        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">REST</span><span class="chip">RBAC</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-top"><span class="tag">Machine Learning</span></div>
         <h3>Explainable Risk Classification</h3>
-        <p>XGBoost model on California HMDA mortgage data with SHAP-based explainability, producing per-decision feature attributions suitable for policy and audit review. Authored the IEEE-format conference paper.</p>
+        <p>XGBoost model on California HMDA mortgage data with SHAP-based explainability, producing per-decision feature attributions suitable for policy and audit review. Authored the IEEE-format paper.</p>
         <div class="chips"><span class="chip">XGBoost</span><span class="chip">SHAP</span><span class="chip">Python</span><span class="chip">Explainable ML</span></div>
       </article>
+
       <article class="card reveal">
-        <span class="tag">ML / Security</span>
-        <h3>Network Intrusion Detection System</h3>
-        <p>Cloud-based anomaly detection over the NSL-KDD dataset — trained and compared Decision Tree, Random Forest, and Logistic Regression classifiers to flag malicious traffic, deployed on an AWS architecture. Authored the IEEE conference paper.</p>
-        <div class="chips"><span class="chip">Random Forest</span><span class="chip">Decision Tree</span><span class="chip">NSL-KDD</span><span class="chip">AWS</span><span class="chip">Anomaly Detection</span></div>
+        <div class="card-top"><span class="tag">ML / Security</span></div>
+        <h3>Network Intrusion Detection</h3>
+        <p>Cloud-based anomaly detection over the NSL-KDD dataset — trained and compared Decision Tree, Random Forest, and Logistic Regression classifiers to flag malicious traffic on an AWS architecture. Authored the IEEE paper.</p>
+        <div class="chips"><span class="chip">Random Forest</span><span class="chip">NSL-KDD</span><span class="chip">AWS</span><span class="chip">Anomaly Detection</span></div>
       </article>
-    </div>
-  </section>
 
-  <!-- EDUCATION -->
-  <section id="education">
-    <div class="sec-head reveal">
-      <span class="sec-num">03</span>
-      <h2 class="sec-title">Education</h2>
-      <span class="sec-rule"></span>
-    </div>
-    <div class="edu reveal">
-      <div class="edu-row">
-        <div>
-          <h3>San Jose State University</h3>
-          <div class="deg">M.S. in Software Engineering — Distributed Systems, ML, Cloud Computing</div>
-        </div>
-        <div class="meta">Aug 2025 — May 2027<span class="gpa">GPA 3.82 / 4.0</span></div>
-      </div>
-      <div class="edu-row">
-        <div>
-          <h3>Oriental College of Technology (RGPV)</h3>
-          <div class="deg">B.E., Electronics &amp; Communication</div>
-        </div>
-        <div class="meta">2015 — 2019<span class="gpa">CGPA 8.02 / 10</span></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COURSES -->
-  <section id="courses">
-    <div class="sec-head reveal">
-      <span class="sec-num">04</span>
-      <h2 class="sec-title">Courses</h2>
-      <span class="sec-rule"></span>
-    </div>
-    <div class="courses reveal">
-      <span class="course-chip">Data Structures &amp; Algorithms</span>
-      <span class="course-chip">Operating Systems</span>
-      <span class="course-chip">Enterprise Software Platforms</span>
-      <span class="course-chip">Machine Learning</span>
-      <span class="course-chip">Distributed Systems</span>
-      <span class="course-chip">Intelligent Cloud Platform</span>
-      <span class="course-chip">Data Mining</span>
-      <span class="course-chip">System Software Design</span>
     </div>
   </section>
 
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="sec-head reveal">
-      <span class="sec-num">05</span>
+      <span class="sec-num">03</span>
       <h2 class="sec-title">Experience</h2>
       <span class="sec-rule"></span>
     </div>
@@ -387,6 +367,49 @@
           </ul>
         </div>
       </article>
+      <article class="job reveal">
+        <div class="job-when">2020 — 2022<span class="loc">Remote</span></div>
+        <div>
+          <h3>Coding Teacher → Senior Mentor</h3>
+          <div class="co">WhiteHat Jr</div>
+          <ul>
+            <li>Started as a coding teacher and was <b>promoted to Senior Mentor within 6 months</b>, staying with the company for <b>2 years</b>.</li>
+            <li>Taught programming one-on-one, translating technical concepts into clear, structured guidance for students at a wide range of levels.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Education</h2>
+      <span class="sec-rule"></span>
+    </div>
+    <div class="edu reveal">
+      <div class="edu-row">
+        <div>
+          <h3>San Jose State University</h3>
+          <div class="deg">M.S. in Software Engineering — Distributed Systems, ML, Cloud Computing</div>
+        </div>
+        <div class="meta">2025 — 2027<span class="gpa">GPA 3.82 / 4.0</span></div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <h3>Oriental College of Technology (RGPV)</h3>
+          <div class="deg">B.E., Electronics &amp; Communication</div>
+        </div>
+        <div class="meta">2015 — 2019<span class="gpa">CGPA 8.02 / 10</span></div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <h3>Relevant Coursework</h3>
+          <div class="deg">Distributed Systems · Operating Systems · Machine Learning · Data Structures &amp; Algorithms · Enterprise Software Platforms · Intelligent Cloud Platform · Data Mining · System Software Design</div>
+        </div>
+        <div class="meta">SJSU</div>
+      </div>
     </div>
   </section>
 
@@ -411,12 +434,9 @@
 </footer>
 
 <script>
-  // nav background on scroll
   const nav=document.getElementById('nav');
   addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
-  // year
   document.getElementById('yr').textContent=new Date().getFullYear();
-  // scroll reveal
   const io=new IntersectionObserver((es)=>{
     es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
   },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
