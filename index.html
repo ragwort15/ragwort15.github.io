@@ -76,6 +76,13 @@
 
   /* ---------- hero ---------- */
   header{min-height:100svh;display:flex;align-items:center;position:relative;padding:120px 0 32px}
+  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:52px;align-items:center;width:100%}
+  .hero-photo{width:280px;height:280px;object-fit:cover;border:1px solid var(--line);border-radius:3px;filter:grayscale(15%);transition:filter .3s,border-color .3s}
+  .hero-photo:hover{filter:grayscale(0%);border-color:var(--accent)}
+  @media(max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:32px}
+    .hero-photo{width:180px;height:180px;order:-1}
+  }
   .eyebrow{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
   .eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
   h1{
@@ -207,10 +214,472 @@
 
 <header id="top">
   <div class="wrap hero-stagger">
-    <div class="eyebrow">Backend &amp; Distributed Systems Engineer</div>
-    <h1>Building something<br>that needs to <em>scale?</em></h1>
-    <p class="intro">Hi, I'm <strong>Anupama Singh</strong>.</p>
-    <p class="hero-about">I build <strong>scalable, fault-tolerant</strong> backend systems that hold up under real load. My focus is the layer that keeps services alive — distributed systems, failure detection, and observability — plus the automation that catches problems before users do. I work hands-on with Kafka, Kubernetes, gRPC, and CI/CD across Azure and AWS, wiring in Prometheus and Grafana so nothing fails silently, and I'm increasingly building with <strong>AI agents</strong> to take repetitive work off engineers' plates. Now pursuing an M.S. in Software Engineering at San Jose State, going deep on distributed systems, ML, and cloud.</p>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Backend &amp; Distributed Systems Engineer</div>
+        <h1>Building something<br>that needs to <em>scale?</em></h1>
+        <p class="intro">Hi, I'm <strong>Anupama Singh</strong>.</p>
+        <p class="hero-about">I build <strong>scalable, fault-tolerant</strong> backend systems that hold up under real load. My focus is the layer that keeps services alive — distributed systems, failure detection, and observability — plus the automation that catches problems before users do. I work hands-on with Kafka, Kubernetes, gRPC, and CI/CD across Azure and AWS, wiring in Prometheus and Grafana so nothing fails silently, and I'm increasingly building with <strong>AI agents</strong> to take repetitive work off engineers' plates. Now pursuing an M.S. in Software Engineering at San Jose State, going deep on distributed systems, ML, and cloud.</p>
+      </div>
+      <img class="hero-photo" src="me.jpeg" alt="Anupama Singh">
+    </div>
+    <div class="hero-meta">
+      <span class="gpa-badge"><span class="dot"></span> GPA 3.82 / 4.0</span>
+      <span>Open to SWE / Backend roles</span>
+      <span>◷ San Jose, CA</span>
+      <span>4+ yrs experience</span>
+    </div>
+    <div class="cta-row">
+      <a href="#contact" class="btn primary">→ Get in touch</a>
+      <a href="Singh_Anupama_Resume.pdf" target="_blank" class="btn">↓ Résumé</a>
+      <a href="https://github.com/ragwort15" target="_blank" rel="noopener" class="btn">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/anupama97/" target="_blank" rel="noopener" class="btn">LinkedIn ↗</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="sec-head reveal">
+      <span class="sec-num">01</span>
+      <h2 class="sec-title">Skills</h2>
+      <span class="sec-rule"></span>
+    </div>
+    <div class="reveal">
+      <div class="skill-row"><span class="cat">Languages</span><span class="items">Python, Java, C++, JavaScript, TypeScript, Go (learning), SQL</span></div>
+      <div class="skill-row"><span class="cat">Backend &amp; Distributed</span><span class="items">Spring Boot, Node.js, REST &amp; microservices, gRPC / protobuf, Kafka, WebSockets, event-driven design</span></div>
+      <div class="skill-row"><span class="cat">AI &amp; ML</span><span class="items">AI agents &amp; agentic workflows, RAG systems, LangGraph, XGBoost, SHAP, NLP</span></div>
+      <div class="skill-row"><span class="cat">Cloud &amp; DevOps</span><span class="items">AWS (CloudFormation, CodePipeline), Azure (AKS), Docker, Kubernetes, CI/CD, Git</span></div>
+      <div class="skill-row"><span class="cat">Data &amp; Observability</span><span class="items">MySQL, PostgreSQL, Prometheus, Grafana</span></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="sec-head reveal">
+      <span class="sec-num">02</span>
+      <h2 class="sec-title">Selected Projects</h2>
+      <span class="sec-rule"></span>
+    </div>
+    <div class="proj-grid">
+
+      <a class="card reveal" href="https://github.com/ragwort15/paperchat" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">AI / Retrieval</span><span class="go">↗</span></div>
+        <h3>PaperChat — RAG over arXiv</h3>
+        <p>End-to-end retrieval-augmented pipeline: web ingestion, BGE embeddings, and cosine-similarity retrieval with local generation. Built a RAGAS-style evaluation harness and ran a cross-encoder reranker A/B test to keep output measurable.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">Evaluation</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">Hackathon · Bioinformatics</span><span class="go">↗</span></div>
+        <h3>Genome Firewall</h3>
+        <p>Takes a DNA sequence as input and recommends the more effective drug for a bacterial infection. Built in Python at a hackathon, turning genomic input into an actionable treatment suggestion.</p>
+        <div class="chips"><span class="chip">Python</span><span class="chip">Bioinformatics</span><span class="chip">DNA</span><span class="chip">Hackathon</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15/FutureLensAI" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">AI Agents</span><span class="go">↗</span></div>
+        <h3>FutureLens — Multi-Agent Simulation</h3>
+        <p>Multi-agent decision-simulation tool. A LangGraph pipeline orchestrates LLM calls with live web retrieval behind a FastAPI backend — an example of directing AI tools to build a working system end to end.</p>
+        <div class="chips"><span class="chip">LangGraph</span><span class="chip">Multi-Agent</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15/kafka-event-pipeline" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">Distributed Systems</span><span class="go">↗</span></div>
+        <h3>Kafka Event Pipeline</h3>
+        <p>Python event-processing pipeline on a Dockerized Kafka cluster, exploring partitions, consumer groups, delivery semantics, windowed aggregation, and broker failover — the internals behind reliable streaming.</p>
+        <div class="chips"><span class="chip">Kafka</span><span class="chip">Python</span><span class="chip">Docker</span><span class="chip">Streaming</span></div>
+      </a>
+
+      <a class="card reveal" href="https://github.com/ragwort15" target="_blank" rel="noopener">
+        <div class="card-top"><span class="tag">Backend</span><span class="go">↗</span></div>
+        <h3>URL Shortener Service</h3>
+        <p>HTTP service in Go with counter-based base62 ID generation, a pluggable storage interface for swapping in-memory and database backends, RWMutex-guarded concurrent access, and 302 redirects for accurate click counting.</p>
+        <div class="chips"><span class="chip">Go</span><span class="chip">Concurrency</span><span class="chip">HTTP</span><span class="chip">System Design</span></div>
+      </a>
+
+      <article class="card reveal">
+        <div class="card-top"><span class="tag">Distributed Systems</span></div>
+        <h3>Distributed Chord — Task Engine</h3>
+        <p>Implemented the Chord DHT to route tasks across a peer-to-peer ring with finger-table maintenance and stabilization. Fault-tolerant dispatch via consistent hashing, with O(log N) lookups under churn.</p>
+        <div class="chips"><span class="chip">Chord DHT</span><span class="chip">Consistent Hashing</span><span class="chip">P2P</span><span class="chip">Fault Tolerance</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-top"><span class="tag">Platform</span></div>
+        <h3>Clinical Trials Management Platform</h3>
+        <p>Enterprise platform for the end-to-end clinical-trial lifecycle — modular services, RESTful APIs, and role-based access over sensitive data, with Prometheus and Grafana telemetry across services.</p>
+        <div class="chips"><span class="chip">Spring Boot</span><span class="chip">REST</span><span class="chip">RBAC</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-top"><span class="tag">Machine Learning</span></div>
+        <h3>Explainable Risk Classification</h3>
+        <p>XGBoost model on California HMDA mortgage data with SHAP-based explainability, producing per-decision feature attributions suitable for policy and audit review. Authored the IEEE-format paper.</p>
+        <div class="chips"><span class="chip">XGBoost</span><span class="chip">SHAP</span><span class="chip">Python</span><span class="chip">Explainable ML</span></div>
+      </article>
+
+      <article class="card reveal">
+        <div class="card-top"><span class="tag">ML / Security</span></div>
+        <h3>Network Intrusion Detection</h3>
+        <p>Cloud-based anomaly detection over the NSL-KDD dataset — trained and compared Decision Tree, Random Forest, and Logistic Regression classifiers to flag malicious traffic on an AWS architecture. Authored the IEEE paper.</p>
+        <div class="chips"><span class="chip">Random Forest</span><span class="chip">NSL-KDD</span><span class="chip">AWS</span><span class="chip">Anomaly Detection</span></div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="sec-head reveal">
+      <span class="sec-num">03</span>
+      <h2 class="sec-title">Experience</h2>
+      <span class="sec-rule"></span>
+    </div>
+    <div class="xp">
+      <article class="job reveal">
+        <div class="job-when">Jan 2024 — Aug 2025<span class="loc">Pune, India</span></div>
+        <div>
+          <h3>Tech Lead, Full-Stack Engineer</h3>
+          <div class="co">Tata Consultancy Services</div>
+          <ul>
+            <li>Led delivery of <b>10+ platform features</b> on a Node.js runtime, improving performance and stability for a large internal user base.</li>
+            <li>Designed and shipped a Spring Boot service with scheduled batch jobs to transform encrypted data — <b>+68% account-creation throughput</b>.</li>
+            <li>Cut page reload time <b>45%</b> by re-architecting UI workflows and adding client- and service-level caching.</li>
+            <li>Improved deployment reliability <b>25%</b> by tuning Kubernetes on Azure — resource limits, health probes, rolling updates.</li>
+            <li>Built Python/regex automation for file ingestion and search, eliminating <b>~7 hrs/week</b> of manual operational work.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job reveal">
+        <div class="job-when">Nov 2022 — Dec 2023<span class="loc">Pune, India</span></div>
+        <div>
+          <h3>Software Engineer, Full-Stack</h3>
+          <div class="co">Tata Consultancy Services</div>
+          <ul>
+            <li>Built an Angular 14 SPA integrating <b>5 backend microservices</b> with unified APIs and centralized operational visibility.</li>
+            <li>Designed and tested REST APIs with Postman and Swagger, ensuring contract stability across services.</li>
+            <li>Built a reusable dynamic form-builder on React + Shadcn/UI, cutting feature delivery time <b>30%</b> for downstream teams.</li>
+            <li>Modernized legacy frontends to current ECMAScript standards, delivering a defect-free release.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job reveal">
+        <div class="job-when">Jan 2020 — Oct 2022<span class="loc">Pune, India</span></div>
+        <div>
+          <h3>Application Development Analyst</h3>
+          <div class="co">Accenture</div>
+          <ul>
+            <li>Built Angular + Spring Boot CI/CD pipelines that cut deployment time <b>90%</b> and reduced release-related incidents.</li>
+            <li>Developed AI chatbots on Amazon Lex and Dialogflow to automate internal user interactions and triage.</li>
+            <li>Designed an NLP PoC using neural networks that cut inbound support tickets <b>27%</b> via intent classification.</li>
+            <li>Shipped an Electron desktop app that reduced data-sync time <b>98%</b> for field users.</li>
+          </ul>
+        </div>
+      </article>
+      <article class="job reveal">
+        <div class="job-when">2020 — 2022<span class="loc">Remote</span></div>
+        <div>
+          <h3>Coding Teacher → Senior Mentor</h3>
+          <div class="co">WhiteHat Jr</div>
+          <ul>
+            <li>Started as a coding teacher and was <b>promoted to Senior Mentor within 6 months</b>, staying with the company for <b>2 years</b>.</li>
+            <li>Taught programming one-on-one, translating technical concepts into clear, structured guidance for students at a wide range of levels.</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="sec-head reveal">
+      <span class="sec-num">04</span>
+      <h2 class="sec-title">Education</h2>
+      <span class="sec-rule"></span>
+    </div>
+    <div class="edu reveal">
+      <div class="edu-row">
+        <div>
+          <h3>San Jose State University</h3>
+          <div class="deg">M.S. in Software Engineering — Distributed Systems, ML, Cloud Computing</div>
+        </div>
+        <div class="meta">2025 — 2027<span class="gpa">GPA 3.82 / 4.0</span></div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <h3>Oriental College of Technology (RGPV)</h3>
+          <div class="deg">B.E., Electronics &amp; Communication</div>
+        </div>
+        <div class="meta">2015 — 2019<span class="gpa">CGPA 8.02 / 10</span></div>
+      </div>
+      <div class="edu-row">
+        <div>
+          <h3>Relevant Coursework</h3>
+          <div class="deg">Distributed Systems · Operating Systems · Machine Learning · Data Structures &amp; Algorithms · Enterprise Software Platforms · Intelligent Cloud Platform · Data Mining · System Software Design</div>
+        </div>
+        <div class="meta">SJSU</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="eyebrow">Let's talk</div>
+    <h2>Let's build something<br><em>great.</em></h2>
+    <p class="sub">I'm open to Software Engineer and Backend roles. Fastest way to reach me is email.</p>
+    <div class="foot-links">
+      <a href="mailto:anupama.singh@sjsu.edu" class="btn primary">→ anupama.singh@sjsu.edu</a>
+      <a href="https://www.linkedin.com/in/anupama97/" target="_blank" rel="noopener" class="btn">LinkedIn ↗</a>
+      <a href="https://github.com/ragwort15" target="_blank" rel="noopener" class="btn">GitHub ↗</a>
+    </div>
+    <div class="foot-base">
+      <span>Anupama Singh · San Jose, CA</span>
+      <span>© <span id="yr"></span> · Built from scratch</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav=document.getElementById('nav');
+  addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  const io=new IntersectionObserver((es)=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+  },{threshold:.12,rootMargin:'0px 0px -40px 0px'});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anupama Singh — Backend & Distributed Systems Engineer</title>
+<meta name="description" content="Anupama Singh — Backend & Distributed Systems Engineer. 4+ years building scalable, fault-tolerant services, with hands-on work in distributed systems, observability, and AI agents.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Schibsted+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0e0d11;
+    --bg-2:#15131a;
+    --surface:#191720;
+    --line:#2a2733;
+    --ink:#ece8e1;
+    --muted:#9b958c;
+    --faint:#6f6a73;
+    --accent:#e0a458;
+    --accent-soft:rgba(224,164,88,.14);
+    --display:"Fraunces",Georgia,serif;
+    --body:"Schibsted Grotesk",system-ui,sans-serif;
+    --mono:"JetBrains Mono",ui-monospace,monospace;
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:var(--body);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  /* subtle grid + grain backdrop */
+  body::before{
+    content:"";
+    position:fixed;inset:0;z-index:-2;
+    background-image:
+      linear-gradient(var(--line) 1px,transparent 1px),
+      linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;
+    opacity:.20;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%);
+    -webkit-mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 80%);
+  }
+  body::after{
+    content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+    background:radial-gradient(900px 500px at 78% -8%,var(--accent-soft),transparent 60%);
+  }
+  a{color:inherit;text-decoration:none}
+  ::selection{background:var(--accent);color:#1a1206}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---------- nav ---------- */
+  nav{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    backdrop-filter:blur(10px);
+    background:linear-gradient(180deg,rgba(14,13,17,.85),rgba(14,13,17,.4));
+    border-bottom:1px solid transparent;
+    transition:border-color .3s,background .3s;
+  }
+  nav.scrolled{border-bottom-color:var(--line);background:rgba(14,13,17,.92)}
+  .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 28px;display:flex;justify-content:space-between;align-items:center}
+  .brand{font-family:var(--mono);font-size:14px;letter-spacing:.02em;color:var(--ink)}
+  .brand b{color:var(--accent);font-weight:500}
+  .nav-links{display:flex;gap:30px}
+  .nav-links a{font-family:var(--mono);font-size:12.5px;color:var(--muted);transition:color .2s;position:relative}
+  .nav-links a:hover{color:var(--ink)}
+  .nav-links a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:1px;background:var(--accent);transition:width .25s}
+  .nav-links a:hover::after{width:100%}
+  @media(max-width:680px){.nav-links{display:none}}
+
+  /* ---------- hero ---------- */
+  header{min-height:100svh;display:flex;align-items:center;position:relative;padding:120px 0 32px}
+  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:52px;align-items:center;width:100%}
+  .hero-photo{width:280px;height:280px;object-fit:cover;border:1px solid var(--line);border-radius:3px;filter:grayscale(15%);transition:filter .3s,border-color .3s}
+  .hero-photo:hover{filter:grayscale(0%);border-color:var(--accent)}
+  @media(max-width:820px){
+    .hero-grid{grid-template-columns:1fr;gap:32px}
+    .hero-photo{width:180px;height:180px;order:-1}
+  }
+  .eyebrow{font-family:var(--mono);font-size:12.5px;color:var(--accent);letter-spacing:.12em;text-transform:uppercase;display:flex;align-items:center;gap:10px}
+  .eyebrow::before{content:"";width:28px;height:1px;background:var(--accent)}
+  h1{
+    font-family:var(--display);
+    font-weight:500;
+    font-size:clamp(2.3rem,6.4vw,4.4rem);
+    line-height:1.02;
+    letter-spacing:-.02em;
+    margin:20px 0 16px;
+  }
+  h1 em{font-style:italic;color:var(--accent)}
+  .intro{font-size:clamp(1.15rem,2.6vw,1.55rem);color:var(--muted);font-weight:400;margin-bottom:18px}
+  .intro strong{color:var(--ink);font-weight:600}
+  .hero-about{font-size:clamp(1.02rem,2vw,1.18rem);color:var(--ink);max-width:64ch;font-weight:400;line-height:1.75}
+  .hero-about strong{color:var(--accent);font-weight:500}
+  .hero-meta{display:flex;flex-wrap:wrap;gap:14px 26px;margin-top:38px;font-family:var(--mono);font-size:13px;color:var(--faint)}
+  .hero-meta span{display:flex;align-items:center;gap:8px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px var(--accent)}
+  .hero-meta .gpa-badge{color:var(--accent);font-weight:600;border:1px solid var(--accent);padding:5px 12px;border-radius:100px;background:var(--accent-soft)}
+  .cta-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:42px}
+  .btn{
+    font-family:var(--mono);font-size:13px;padding:13px 22px;border-radius:2px;
+    border:1px solid var(--line);transition:all .22s;display:inline-flex;align-items:center;gap:9px;
+  }
+  .btn:hover{border-color:var(--accent);color:var(--accent);transform:translateY(-2px)}
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .btn.primary{background:var(--accent);color:#1a1206;border-color:var(--accent);font-weight:500}
+  .btn.primary:hover{background:transparent;color:var(--accent);transform:translateY(-2px)}
+
+  /* ---------- sections ---------- */
+  section{padding:36px 0;position:relative}
+  #skills{padding-top:28px}
+  .sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:52px}
+  .sec-num{font-family:var(--mono);font-size:13px;color:var(--accent)}
+  .sec-title{font-family:var(--display);font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:500;letter-spacing:-.01em}
+  .sec-rule{flex:1;height:1px;background:var(--line);align-self:center;margin-bottom:6px}
+
+  /* ---------- experience ---------- */
+  .xp{border-top:1px solid var(--line)}
+  .job{display:grid;grid-template-columns:200px 1fr;gap:28px;padding:36px 0;border-bottom:1px solid var(--line);transition:background .25s}
+  .job:hover{background:linear-gradient(90deg,var(--accent-soft),transparent 70%)}
+  .job-when{font-family:var(--mono);font-size:12.5px;color:var(--faint)}
+  .job-when .loc{display:block;margin-top:6px;color:var(--muted)}
+  .job h3{font-family:var(--display);font-size:1.5rem;font-weight:500;letter-spacing:-.01em}
+  .job .co{font-family:var(--mono);font-size:12.5px;color:var(--accent);margin:6px 0 16px;letter-spacing:.02em}
+  .job ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .job li{position:relative;padding-left:22px;color:var(--muted);font-size:.97rem}
+  .job li::before{content:"▸";position:absolute;left:0;color:var(--accent);font-size:.8rem;top:2px}
+  .job li b{color:var(--ink);font-weight:500}
+  @media(max-width:680px){.job{grid-template-columns:1fr;gap:14px}}
+
+  /* ---------- projects ---------- */
+  .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+  @media(max-width:680px){.proj-grid{grid-template-columns:1fr}}
+  .card{
+    border:1px solid var(--line);background:linear-gradient(160deg,var(--surface),var(--bg-2));
+    padding:28px;border-radius:3px;transition:transform .25s,border-color .25s;position:relative;overflow:hidden;
+    display:flex;flex-direction:column;
+  }
+  .card::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--accent);transition:width .35s}
+  .card:hover{transform:translateY(-5px);border-color:var(--accent)}
+  .card:hover::before{width:100%}
+  .card:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+  .card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+  .card .tag{font-family:var(--mono);font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.08em}
+  .card .go{font-family:var(--mono);font-size:16px;color:var(--faint);transition:color .2s,transform .2s;flex-shrink:0}
+  .card:hover .go{color:var(--accent);transform:translate(3px,-3px)}
+  .card h3{font-family:var(--display);font-size:1.4rem;font-weight:500;margin:12px 0 12px;letter-spacing:-.01em}
+  .card p{color:var(--muted);font-size:.95rem;margin-bottom:18px;flex:1}
+  .chips{display:flex;flex-wrap:wrap;gap:7px}
+  .chip{font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);padding:4px 10px;border-radius:100px}
+
+  /* ---------- skills ---------- */
+  .skill-row{padding:18px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:160px 1fr;gap:18px;align-items:baseline}
+  .skill-row .cat{font-family:var(--mono);font-size:12px;color:var(--accent);text-transform:uppercase;letter-spacing:.05em}
+  .skill-row .items{color:var(--ink);font-size:.97rem}
+  @media(max-width:680px){.skill-row{grid-template-columns:1fr;gap:8px}}
+  .courses{display:flex;flex-wrap:wrap;gap:10px}
+  .course-chip{font-family:var(--mono);font-size:13px;color:var(--ink);border:1px solid var(--line);border-radius:100px;padding:9px 16px;transition:border-color .2s ease,color .2s ease,background .2s ease}
+  .course-chip:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-soft)}
+
+  /* ---------- education ---------- */
+  .edu{display:flex;flex-direction:column;gap:0}
+  .edu-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:26px 0;border-bottom:1px solid var(--line)}
+  .edu-row h3{font-family:var(--display);font-size:1.35rem;font-weight:500}
+  .edu-row .deg{color:var(--muted);font-size:.95rem;margin-top:4px}
+  .edu-row .meta{font-family:var(--mono);font-size:12.5px;color:var(--faint);text-align:right}
+  .edu-row .meta .gpa{color:var(--accent);display:block;margin-top:6px}
+  @media(max-width:680px){.edu-row{grid-template-columns:1fr}.edu-row .meta{text-align:left}}
+
+  /* ---------- footer ---------- */
+  footer{padding:36px 0 60px;border-top:1px solid var(--line);text-align:center}
+  footer .eyebrow{justify-content:center}
+  footer h2{font-family:var(--display);font-size:clamp(2.2rem,7vw,4rem);font-weight:500;margin:20px 0 14px;letter-spacing:-.02em}
+  footer h2 em{font-style:italic;color:var(--accent)}
+  footer .sub{color:var(--muted);max-width:46ch;margin:0 auto 36px}
+  .foot-links{display:flex;justify-content:center;flex-wrap:wrap;gap:14px}
+  .foot-base{margin-top:64px;font-family:var(--mono);font-size:12px;color:var(--faint);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+  /* ---------- reveal animation ---------- */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+  .reveal.in{opacity:1;transform:none}
+  .hero-stagger>*{opacity:0;transform:translateY(20px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  .hero-stagger>*:nth-child(1){animation-delay:.05s}
+  .hero-stagger>*:nth-child(2){animation-delay:.18s}
+  .hero-stagger>*:nth-child(3){animation-delay:.31s}
+  .hero-stagger>*:nth-child(4){animation-delay:.44s}
+  .hero-stagger>*:nth-child(5){animation-delay:.57s}
+  .hero-stagger>*:nth-child(6){animation-delay:.70s}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media(prefers-reduced-motion:reduce){.reveal,.hero-stagger>*{opacity:1!important;transform:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">Anupama<b>Singh</b></a>
+    <div class="nav-links">
+      <a href="#top">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#education">education</a>
+      <a href="#contact">contact</a>
+    </div>
+  </div>
+</nav>
+
+<header id="top">
+  <div class="wrap hero-stagger">
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Backend &amp; Distributed Systems Engineer</div>
+        <h1>Building something<br>that needs to <em>scale?</em></h1>
+        <p class="intro">Hi, I'm <strong>Anupama Singh</strong>.</p>
+        <p class="hero-about">I build <strong>scalable, fault-tolerant</strong> backend systems that hold up under real load. My focus is the layer that keeps services alive — distributed systems, failure detection, and observability — plus the automation that catches problems before users do. I work hands-on with Kafka, Kubernetes, gRPC, and CI/CD across Azure and AWS, wiring in Prometheus and Grafana so nothing fails silently, and I'm increasingly building with <strong>AI agents</strong> to take repetitive work off engineers' plates. Now pursuing an M.S. in Software Engineering at San Jose State, going deep on distributed systems, ML, and cloud.</p>
+      </div>
+      <img class="hero-photo" src="me.jpeg" alt="Anupama Singh">
+    </div>
     <div class="hero-meta">
       <span class="gpa-badge"><span class="dot"></span> GPA 3.82 / 4.0</span>
       <span>Open to SWE / Backend roles</span>
