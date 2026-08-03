@@ -76,7 +76,7 @@
 
   /* ---------- hero ---------- */
   header{min-height:100svh;display:flex;align-items:center;position:relative;padding:120px 0 32px}
-  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:52px;align-items:center;width:100%}
+  .hero-grid{display:grid;grid-template-columns:auto 1fr;gap:52px;align-items:center;width:100%}
   .hero-photo{width:280px;height:280px;object-fit:cover;border:1px solid var(--line);border-radius:50%;filter:grayscale(15%);transition:filter .3s,border-color .3s}
   .hero-photo:hover{filter:grayscale(0%);border-color:var(--accent)}
   @media(max-width:820px){
@@ -215,13 +215,13 @@
 <header id="top">
   <div class="wrap hero-stagger">
     <div class="hero-grid">
+      <img class="hero-photo" src="me.jpeg" alt="Anupama Singh">
       <div>
         <div class="eyebrow">Backend &amp; Distributed Systems Engineer</div>
         <h1>Building something<br>that needs to <em>scale?</em></h1>
         <p class="intro">Hi, I'm <strong>Anupama Singh</strong>.</p>
         <p class="hero-about">I build <strong>backend and distributed systems</strong> that hold up in production. My recent focus has been backend integration for <strong>ISO 20022 payment messaging</strong> at a bank — Java, Kafka/MQ, XSLT mappings, secure connection profiles — as part of a Tech Lead role. Alongside that, I've built full-stack applications for enterprise healthcare and worked with AI agents and RAG systems. Now pursuing an M.S. in Software Engineering at San Jose State, going deep on distributed systems, ML, and cloud.</p>
       </div>
-      <img class="hero-photo" src="me.jpeg" alt="Anupama Singh">
     </div>
     <div class="hero-meta">
       <span class="gpa-badge"><span class="dot"></span> GPA 3.82 / 4.0</span>
@@ -273,7 +273,7 @@
         <div class="chips"><span class="chip">Python</span><span class="chip">RAG</span><span class="chip">Embeddings</span><span class="chip">Evaluation</span></div>
       </a>
 
-      <a class="card reveal" href="https://github.com/ragwort15/GenomeFirewall" target="_blank" rel="noopener">
+      <a class="card reveal" href="https://github.com/ragwort15" target="_blank" rel="noopener">
         <div class="card-top"><span class="tag">Hackathon · Bioinformatics</span><span class="go">↗</span></div>
         <h3>Genome Firewall</h3>
         <p>Takes a DNA sequence as input and recommends the more effective drug for a bacterial infection. Built in Python at a hackathon, turning genomic input into an actionable treatment suggestion.</p>
@@ -287,9 +287,9 @@
         <div class="chips"><span class="chip">LangGraph</span><span class="chip">Multi-Agent</span><span class="chip">FastAPI</span><span class="chip">LLM</span></div>
       </a>
 
-      <a class="card reveal" href="https://github.com/ragwort15/Network-Chats" target="_blank" rel="noopener">
+      <a class="card reveal" href="https://github.com/ragwort15" target="_blank" rel="noopener">
         <div class="card-top"><span class="tag">Networking</span><span class="go">↗</span></div>
-        <h3>Network Chats</h3>
+        <h3>Peer-to-Peer Chat</h3>
         <p>Real-time chat between two machines over WebSockets, connecting directly peer-to-peer with no central relay server. Built in Python to explore live bidirectional messaging and connection handling.</p>
         <div class="chips"><span class="chip">Python</span><span class="chip">WebSockets</span><span class="chip">P2P</span><span class="chip">Real-Time</span></div>
       </a>
@@ -301,7 +301,7 @@
         <div class="chips"><span class="chip">Kafka</span><span class="chip">Python</span><span class="chip">Docker</span><span class="chip">Streaming</span></div>
       </a>
 
-      <a class="card reveal" href="https://github.com/ragwort15/URL_Shortner" target="_blank" rel="noopener">
+      <a class="card reveal" href="https://github.com/ragwort15" target="_blank" rel="noopener">
         <div class="card-top"><span class="tag">Backend</span><span class="go">↗</span></div>
         <h3>URL Shortener Service</h3>
         <p>HTTP service in Go with counter-based base62 ID generation, a pluggable storage interface for swapping in-memory and database backends, RWMutex-guarded concurrent access, and 302 redirects for accurate click counting.</p>
@@ -312,8 +312,8 @@
         <div class="card-top"><span class="tag">Distributed Systems</span><span class="go">↗</span></div>
         <h3>Distributed Chord — Task Engine</h3>
         <p>Implemented the Chord DHT to route tasks across a peer-to-peer ring with finger-table maintenance and stabilization. Fault-tolerant dispatch via consistent hashing, with O(log N) lookups under churn.</p>
-       <div class="chips"><span class="chip">Chord DHT</span><span class="chip">Consistent Hashing</span><span class="chip">P2P</span><span class="chip">Fault Tolerance</span></div>
-    </a>
+        <div class="chips"><span class="chip">Chord DHT</span><span class="chip">Consistent Hashing</span><span class="chip">P2P</span><span class="chip">Fault Tolerance</span></div>
+      </a>
 
       <article class="card reveal">
         <div class="card-top"><span class="tag">Platform</span></div>
@@ -322,12 +322,12 @@
         <div class="chips"><span class="chip">Spring Boot</span><span class="chip">REST</span><span class="chip">RBAC</span><span class="chip">Prometheus</span><span class="chip">Grafana</span></div>
       </article>
 
-      <a class="card reveal" href="https://hmda-mortgage-app.onrender.com/predict" target="_blank" rel="noopener">
+      <article class="card reveal">
         <div class="card-top"><span class="tag">Machine Learning</span></div>
         <h3>Explainable Risk Classification</h3>
         <p>XGBoost model on California HMDA mortgage data with SHAP-based explainability, producing per-decision feature attributions suitable for policy and audit review. Authored the IEEE-format paper.</p>
         <div class="chips"><span class="chip">XGBoost</span><span class="chip">SHAP</span><span class="chip">Python</span><span class="chip">Explainable ML</span></div>
-      </a>
+      </article>
 
       <article class="card reveal">
         <div class="card-top"><span class="tag">ML / Security</span></div>
